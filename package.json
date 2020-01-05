@@ -1,0 +1,20 @@
+{
+  "name": "node-log",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/nonocast/node-log.git",
+  "author": "Hui Cao <nonocast@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "cross-env DEBUG=app* nodemon app",
+    "prod": "cross-env DEBUG=app* pm2 start ecosystem.config.js --env production"
+  },
+  "dependencies": {
+    "debug": "^4.1.1",
+    "koa": "^2.11.0"
+  },
+  "devDependencies": {
+    "cross-env": "^6.0.3",
+    "nodemon": "^1.19.4"
+  }
+}
