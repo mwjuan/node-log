@@ -1,4 +1,23 @@
-const debug = require('debug')('app.main');
+const Logger = require('./Logger');
+const logger = new Logger();
 
-console.log("foo bar");
-debug("hello world");
+/*
+const winston = require('winston');
+
+const logger = winston.createLogger({
+  level: 'info',
+  format: winston.format.json(),
+  transports: [
+    new winston.transports.Console(),
+    new winston.transports.File({ filename: 'combined.log' })
+  ]
+});
+*/
+
+logger.info({
+  message: 'hello world',
+  body: {
+    t1: 't111',
+    t2: 'zzz222'
+  }
+});
